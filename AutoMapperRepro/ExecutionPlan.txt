@@ -1,0 +1,160 @@
+﻿(src, dest, ctxt) =>
+{
+    Response typeMapDestination;
+    return (src == null)
+        ? null
+        : {
+            typeMapDestination = dest ?? new Response();
+            try
+            {
+                var resolvedValue = ((src == null) || false) ? null : src.Resource;
+var propertyValue =
+{
+                    Response.ResourcePart typeMapDestination;
+                    return (resolvedValue == null)
+                        ? null
+                        : {
+                            typeMapDestination = ((dest == null) ? null : typeMapDestination.Resource) ?? new Response.ResourcePart();
+                            try
+                            {
+                                var resolvedValue = ((resolvedValue == null) || false) ? null : resolvedValue.Id;
+var propertyValue = (resolvedValue == null) ? null : resolvedValue;
+typeMapDestination.Id = propertyValue;
+                            }
+                            catch (Exception ex)
+                            {
+                                throw new AutoMapperMappingException(
+                                    "Error mapping types.",
+                                    ex,
+                                    AutoMapper.TypePair,
+                                    TypeMap,
+                                    PropertyMap);
+
+                                return null;
+                            }
+                            try
+                            {
+                                var resolvedValue = ((IValueResolver<IResource, Response.ResourcePart, Response.ConnectionPart>)ctxt.Options.CreateInstance<ConnectionValueResolver<Response.ConnectionPart>>()).Resolve(
+                                    resolvedValue,
+                                    typeMapDestination,
+                                    typeMapDestination.Connection,
+                                    ctxt);
+var propertyValue =
+{
+                                    Response.ConnectionPart typeMapDestination;
+                                    return (((IConnection) resolvedValue) == null)
+                                        ? null
+                                        : {
+                                            typeMapDestination = ((((dest == null) ? null : typeMapDestination.Resource) == null)
+                                                ? null
+                                                : typeMapDestination.Connection) ?? new Response.ConnectionPart();
+                                            try
+                                            {
+                                                var resolvedValue = ((((IConnection)resolvedValue) == null) || false) ? null : ((IConnection)resolvedValue).Id;
+var propertyValue = (resolvedValue == null) ? null : resolvedValue;
+typeMapDestination.Id = propertyValue;
+                                            }
+                                            catch (Exception ex)
+                                            {
+                                                throw new AutoMapperMappingException(
+                                                    "Error mapping types.",
+                                                    ex,
+                                                    AutoMapper.TypePair,
+                                                    TypeMap,
+                                                    PropertyMap);
+
+                                                return null;
+                                            }
+                                            try
+                                            {
+                                                var resolvedValue = ((IValueResolver<IConnection, Response.ConnectionPart, Response.ApplicationPart>)ctxt.Options.CreateInstance<ApplicationValueResolver<Response.ApplicationPart>>()).Resolve(
+                                                    (IConnection)resolvedValue,
+                                                    typeMapDestination,
+                                                    typeMapDestination.Application,
+                                                    ctxt);
+var propertyValue =
+{
+                                                    Response.ApplicationPart typeMapDestination;
+                                                    return (((IApplication) resolvedValue) == null)
+                                                        ? null
+                                                        : {
+                                                            typeMapDestination = ((((((dest == null) ? null : typeMapDestination.Resource) == null)
+                                                                ? null
+                                                                : typeMapDestination.Connection) == null)
+                                                                ? null
+                                                                : typeMapDestination.Application) ?? new Response.ApplicationPart();
+                                                            try
+                                                            {
+                                                                var resolvedValue = ((((IApplication)resolvedValue) == null) || false) ? null : ((IApplication)resolvedValue).Id;
+var propertyValue = (resolvedValue == null) ? null : resolvedValue;
+typeMapDestination.Id = propertyValue;
+                                                            }
+                                                            catch (Exception ex)
+                                                            {
+                                                                throw new AutoMapperMappingException(
+                                                                    "Error mapping types.",
+                                                                    ex,
+                                                                    AutoMapper.TypePair,
+                                                                    TypeMap,
+                                                                    PropertyMap);
+
+                                                                return null;
+                                                            }
+
+                                                            return typeMapDestination;
+                                                        };
+                                                };
+
+                                                typeMapDestination.Application = propertyValue;
+                                            }
+                                            catch (Exception ex)
+                                            {
+                                                throw new AutoMapperMappingException(
+                                                    "Error mapping types.",
+                                                    ex,
+                                                    AutoMapper.TypePair,
+                                                    TypeMap,
+                                                    PropertyMap);
+
+                                                return null;
+                                            }
+
+                                            return typeMapDestination;
+                                        };
+                                };
+
+                                typeMapDestination.Connection = propertyValue;
+                            }
+                            catch (Exception ex)
+                            {
+                                throw new AutoMapperMappingException(
+                                    "Error mapping types.",
+                                    ex,
+                                    AutoMapper.TypePair,
+                                    TypeMap,
+                                    PropertyMap);
+
+                                return null;
+                            }
+
+                            return typeMapDestination;
+                        };
+                };
+
+                typeMapDestination.Resource = propertyValue;
+            }
+            catch (Exception ex)
+            {
+                throw new AutoMapperMappingException(
+                    "Error mapping types.",
+                    ex,
+                    AutoMapper.TypePair,
+                    TypeMap,
+                    PropertyMap);
+
+                return null;
+            }
+
+            return typeMapDestination;
+        };
+}
